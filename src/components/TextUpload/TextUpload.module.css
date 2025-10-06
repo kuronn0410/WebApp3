@@ -169,7 +169,11 @@
   }
   
   .buttonGroup {
-    flex-direction: column;
+     display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  justify-content: center; /* 水平方向の中央寄せを追加 */
   }
   
   .textContent {

@@ -1,4 +1,6 @@
+/* Button.module.css */
 .button {
+  width: 100%; /* 親要素の幅いっぱいに広げる */
   padding: 1.25rem 1rem; /* px-5 py-2.5 */
   margin: 0.5rem 0; /* my-2 */
   font-size: 1rem; /* text-base */
@@ -9,8 +11,15 @@
   background-color: #2563eb; /* bg-blue-600 */
   color: white; /* text-white */
   transition: background-color 0.3s ease-in-out; /* transition-colors duration-300 ease-in-out */
+  box-sizing: border-box; /* padding込みでwidthを計算 */
+  display: block; /* ブロック要素として表示 */
 }
 
 .button:hover {
   background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+.button:disabled {
+  background-color: #9ca3af; /* 無効状態の色 */
+  cursor: not-allowed; /* 無効状態のカーソル */
 }

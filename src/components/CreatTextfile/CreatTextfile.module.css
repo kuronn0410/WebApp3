@@ -1,0 +1,17 @@
+.fileDownloader {
+  display: inline-block;
+}
+
+.customTrigger {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.customTrigger:hover {
+  opacity: 0.8;
+}
+
+.customTrigger[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

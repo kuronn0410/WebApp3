@@ -134,15 +134,7 @@ const ZipUpload = ({ onUpload, loading, onReset }) => {
       </div>
 
       {/* 使用方法 */}
-      <div className={styles.instructions}>
-        <h4>📋 使用方法:</h4>
-        <ol>
-          <li>ZIPファイルを上のエリアにドラッグ&ドロップするか、クリックして選択</li>
-          <li>ファイルサイズが50MB以下であることを確認</li>
-          <li>「アップロード」ボタンをクリック</li>
-          <li>アップロード完了まで待機</li>
-        </ol>
-      </div>
+      
     </div>
   );
 };

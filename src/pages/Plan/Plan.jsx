@@ -8,7 +8,7 @@ const Plan = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className={styles.Container}>
       <Header label="プランページ" />
         <div className={styles.Container}>
             <input 
