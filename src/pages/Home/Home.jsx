@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebase/firebaseConfig';
+import { auth } from '../../firebase/firebaseConfig';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
 import './Home.css';
+import Button from '../../components/Button/Button';
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -112,30 +113,6 @@ const Home = () => {
           <h2 className="section-title">利用可能な機能</h2>
           <div className="features-grid">
             <div className="feature-card">
-              <div className="feature-icon">📊</div>
-              <h3 className="feature-title">ダッシュボード</h3>
-              <p className="feature-description">
-                リアルタイムデータと分析を確認
-              </p>
-              <button className="feature-btn">
-                開く
-                <span className="btn-arrow">→</span>
-              </button>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-icon">👥</div>
-              <h3 className="feature-title">プロフィール</h3>
-              <p className="feature-description">
-                アカウント設定とプロフィール管理
-              </p>
-              <button className="feature-btn">
-                編集
-                <span className="btn-arrow">→</span>
-              </button>
-            </div>
-
-            <div className="feature-card">
               <div className="feature-icon">⚙️</div>
               <h3 className="feature-title">設定</h3>
               <p className="feature-description">
@@ -146,50 +123,10 @@ const Home = () => {
                 <span className="btn-arrow">→</span>
               </button>
             </div>
-
-            <div className="feature-card">
-              <div className="feature-icon">🌍</div>
-              <h3 className="feature-title">位置情報</h3>
-              <p className="feature-description">
-                マップとロケーションサービス
-              </p>
-              <button className="feature-btn">
-                表示
-                <span className="btn-arrow">→</span>
-              </button>
-            </div>
           </div>
-        </section>
-
-        {/* ユーザー情報セクション */}
-        <section className="user-section">
-          <div className="user-card">
-            <h3 className="section-title">アカウント情報</h3>
-            <div className="user-details">
-              <div className="detail-item">
-                <span className="detail-label">メールアドレス:</span>
-                <span className="detail-value">{user.email}</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">表示名:</span>
-                <span className="detail-value">{user.displayName || '未設定'}</span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">認証方法:</span>
-                <span className="detail-value">
-                  {user.providerData[0]?.providerId === 'google.com' ? 'Google' : 'メール'}
-                </span>
-              </div>
-              <div className="detail-item">
-                <span className="detail-label">登録日:</span>
-                <span className="detail-value">
-                  {user.metadata.creationTime ? 
-                    new Date(user.metadata.creationTime).toLocaleDateString('ja-JP') : 
-                    '不明'
-                  }
-                </span>
-              </div>
-            </div>
+          <div className="features-grid" >
+            <Button label="計画" onClick={() => navigate('/plan')} />
+            <Button label="Try" onClick={() => navigate('/try')} />
           </div>
         </section>
       </main>

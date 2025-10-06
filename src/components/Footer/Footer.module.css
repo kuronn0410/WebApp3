@@ -1,0 +1,29 @@
+/* Footer.module.css */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  background-color: #f9f9f9;
+  margin-top: auto;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+}

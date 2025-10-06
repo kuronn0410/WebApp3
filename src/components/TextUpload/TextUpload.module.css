@@ -1,0 +1,182 @@
+/* TextUpload.module.css */
+
+.container {
+  width: 100%;
+}
+
+.dropZone {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+  margin-bottom: 20px;
+}
+
+.dropZone:hover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.dropIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.dropText {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.dropSubtext {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.fileInfo {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.fileInfo h4 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.fileInfo p {
+  margin: 4px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.textPreview {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.textPreview h4 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.textContent {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.textContent pre {
+  margin: 0;
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.4;
+  color: #333;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.truncateNote {
+  margin: 8px 0 0 0;
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
+.message {
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.errorMessage {
+  background-color: #ffe6e6;
+  border: 1px solid #ffb3b3;
+  color: #d63031;
+}
+
+.successMessage {
+  background-color: #e6ffe6;
+  border: 1px solid #b3ffb3;
+  color: #00b894;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.instructions {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.instructions h4 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.instructions ol {
+  margin: 0;
+  padding-left: 20px;
+  color: #666;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .dropZone {
+    padding: 30px 15px;
+  }
+  
+  .dropIcon {
+    font-size: 36px;
+  }
+  
+  .dropText {
+    font-size: 14px;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+  }
+  
+  .textContent {
+    max-height: 200px;
+  }
+  
+  .textContent pre {
+    font-size: 11px;
+  }
+}
