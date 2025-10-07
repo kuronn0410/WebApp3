@@ -6,7 +6,7 @@ import Header from '../../components/Header/Header';
 import CreatTextfile from '../../components/CreatTextfile/CreatTextfile';
 const TextCreat = () => {
   const [loading, setLoading] = useState(false);
-  const [fileName, setFileName] = useState(''); // ファイル名の状態
+  const [fileName, setFileName] = useState('sample'); // デフォルト値を追加
   const [textContent, setTextContent] = useState('');
   const navigate = useNavigate();
 
@@ -54,7 +54,7 @@ const TextCreat = () => {
              fileName={fileName} 
              textContent={textContent}
              fileType=".txt"
-             onMessage={() => {}}
+             onMessage={(msg, type) => console.log(`${type}: ${msg}`)}
              disabled={loading}
             />
             <Button 

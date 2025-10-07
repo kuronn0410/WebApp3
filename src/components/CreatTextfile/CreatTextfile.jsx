@@ -25,6 +25,18 @@ const CreatTextfile = ({
         onMessage?.(`${fileName}${fileType} を作成しました！`, 'success');
     };
 
+    const getFileTypeInfo = (type) => {
+        const types = {
+            '.txt': { name: 'テキスト', mimeType: 'text/plain' },
+            '.html': { name: 'HTML', mimeType: 'text/html' },
+            '.css': { name: 'CSS', mimeType: 'text/css' },
+            '.js': { name: 'JavaScript', mimeType: 'text/javascript' },
+            '.json': { name: 'JSON', mimeType: 'application/json' }
+        };
+        return types[type] || types['.txt'];
+    };
+
+
     const handleDownload = async () => {
         setLoading(true);
         try {
