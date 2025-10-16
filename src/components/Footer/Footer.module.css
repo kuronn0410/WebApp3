@@ -4,10 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   border-top: 1px solid #eee;
-  background-color: #f9f9f9;
-  width: 100vw;
+  background-color: #b9b7b7;
+  width: 100%;
   box-sizing: border-box;
   position: fixed;
   bottom: 0;
@@ -19,7 +19,7 @@
 
 .buttonGroup {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 

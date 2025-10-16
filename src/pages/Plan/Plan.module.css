@@ -1,26 +1,60 @@
+/* メインコンテナ - ページ全体のレイアウトを制御 */
 .Container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #f5f5f5;
-  width: 100vw;
-  margin: 0;
-  box-sizing: border-box;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
+  min-height: 100vh;        /* 画面の高さを最低100%に設定 */
+  display: flex;            /* フレックスボックスレイアウト */
+  flex-direction: column;   /* 縦方向にアイテムを配置（Header, Content, Footer） */
+  justify-content: space-between; /* ヘッダー、コンテンツ、フッターを均等配置 */
+  align-items: center;      /* 横軸の中央揃え */
+  background-color: #f5f5f5; /* 薄いグレーの背景色 */
+  width: 100vw;             /* 画面幅いっぱいに設定 */
+  margin: 0;                /* デフォルトマージンをリセット */
+  padding: 0;               /* パディングをリセット（ヘッダー・フッター考慮） */
+  box-sizing: border-box;   /* パディングを含むサイズ計算 */
+  overflow-y: auto;         /* 縦スクロールを有効化 */
+  overflow-x: hidden;       /* 横スクロールを無効化 */
 }
 
 
 
+/* メインコンテンツカード - フォームやボタンを含む白いカード */
 .cade {
-  max-width: 1200px;
-  width: 90%;
-  margin: 2rem auto;
-  background-color: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  margin-bottom: 100px; /* Footerのスペース確保 */
+  max-width: 800px;         /* 最大幅を800pxに制限（読みやすさ向上） */
+  width: 90%;               /* 画面幅の90%を使用（レスポンシブ対応） */
+  background-color: white;  /* 白い背景でコンテンツを強調 */
+  border-radius: 12px;      /* 角丸でモダンなデザイン */
+  padding: 2rem;            /* 内部に2remの余白 */
+  margin: 2rem 0;           /* 上下にマージンを追加（ヘッダー・フッターとの間隔） */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 軽いシャドウで浮遊感 */
+  box-sizing: border-box;   /* パディングを含むサイズ計算 */
+  display: flex;            /* フレックスボックスレイアウト */
+  flex-direction: column;   /* 子要素を縦方向に配置 */
+  gap: 1.5rem;             /* 子要素間に1.5remの間隔 */
+  flex-grow: 1;            /* 残りスペースを活用（ヘッダー・フッター固定時） */
+}
+
+/* フォルダ選択エリア - フォルダ選択ボタンを包含するコンテナ */
+.folderSelect {
+  width: 100%;              /* 親要素の幅いっぱいに設定 */
+  padding: 1rem;            /* 内部に1remの余白 */
+  background-color: #f8f9fa; /* 薄いグレーで区別 */
+  border-radius: 8px;       /* 軽い角丸 */
+  border: 1px solid #e9ecef; /* 薄いボーダーで境界を明確化 */
+  margin: 0.5rem 0;         /* 上下に0.5remのマージン */
+}
+
+/* 選択状態表示エリア - フォルダが選択された時の情報表示 */
+.selectionInfo {
+  width: 100%;              /* 親要素の幅いっぱいに設定 */
+  padding: 0.75rem 1rem;    /* 上下0.75rem、左右1remのパディング */
+  background-color: #e7f3ff; /* 薄い青色で重要情報を強調 */
+  border: 1px solid #b3d9ff; /* 青系のボーダー */
+  border-radius: 6px;       /* 軽い角丸 */
+  margin: 0.5rem 0;         /* 上下に0.5remのマージン */
+}
+
+/* 選択情報のテキストスタイル */
+.selectionInfo p {
+  margin: 0;                /* デフォルトマージンをリセット */
+  color: #1a5490;          /* 濃い青色でテキストを強調 */
+  font-weight: 500;        /* セミボールドフォント */
 }

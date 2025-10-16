@@ -5,6 +5,8 @@ import Plan from './pages/Plan/Plan.jsx';
 import Up from './pages/Up/Up.jsx';
 import Try from './pages/Try/Try.jsx';
 import TextCreat from './pages/TextCreat/TextCreat.jsx';
+import ZipOpen from './pages/ZipOpen/ZipOpen.jsx';
+import ZipD from './pages/ZipD/ZipD.jsx';
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
         <Route path="/up" element={<Up />} />
         <Route path="/try" element={<Try />} />
         <Route path="/text-create" element={<TextCreat />} />
+        <Route path="/zip-open" element={<ZipOpen />} />
+        <Route path="/zip-d" element={<ZipD />} />
       </Routes>
     </>
   );

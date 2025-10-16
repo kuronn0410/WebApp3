@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "expo-location": "^18.1.6",
+    "fflate": "^0.8.2",
     "firebase": "^12.3.0",
+    "jszip": "^3.10.1",
     "leaflet": "^1.9.4",
     "leaflet-routing-machine": "^3.2.12",
     "react": "^19.1.1",

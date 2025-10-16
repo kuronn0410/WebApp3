@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.folder {
+  color: #374151;
+  margin: 4px 0 0 0;
+}
+
+.message {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(59,130,246,0.06);
+  color: #1e40af;
+}

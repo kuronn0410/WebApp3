@@ -1,9 +1,10 @@
 .header {   
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #1e3a8a; /* 青色の背景 */
+  background-color: #1e8a42; /* 青色の背景 */
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

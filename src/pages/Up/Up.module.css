@@ -166,6 +166,132 @@
   display: none;
 }
 
+/* 保存先情報表示 */
+.saveInfo {
+  background: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.saveInfo h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1a5490;
+}
+
+.saveInfo p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ブラウザサポート警告 */
+.warningMessage {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #856404;
+  text-align: center;
+}
+
+/* アップロード履歴セクション */
+.historySection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f0f8ff;
+  border-radius: 12px;
+  border: 1px solid #b3d9ff;
+}
+
+.historyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.historyHeader h3 {
+  margin: 0;
+  color: #1a5490;
+  font-size: 1.2rem;
+}
+
+.historyList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.historyItem {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #e1e8f0;
+  transition: box-shadow 0.2s ease;
+}
+
+.historyItem:hover {
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+}
+
+.historyItem:last-child {
+  margin-bottom: 0;
+}
+
+.historyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fileName {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.fileDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.projectName,
+.fileType,
+.uploadLocation,
+.uploadTime {
+  background: #f8f9fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.projectName {
+  background: #e7f3ff;
+  color: #1a5490;
+}
+
+.fileType {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.uploadLocation {
+  background: #d4edda;
+  color: #155724;
+}
+
+.uploadTime {
+  background: #f8d7da;
+  color: #721c24;
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
   .cade {
@@ -231,5 +357,24 @@
   
   .dropZone {
     padding: 1.5rem 0.5rem;
+  }
+  
+  .historySection {
+    padding: 1rem;
+  }
+  
+  .historyHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  
+  .historyItem {
+    padding: 0.75rem;
+  }
+  
+  .fileDetails {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 }
